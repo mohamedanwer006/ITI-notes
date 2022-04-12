@@ -142,9 +142,10 @@ REVOKE ALL ON Student FROM ahmed
 
 ## DML Data manipulation language 
 
-||**Commands**|||
-|:---:|---|---|---|
+|**Commands**||||
+|---|---|---|---|
 |INSERT|UPDATE|DELETE|SELECT|
+||||
 
 
 ### insert  data into a table
