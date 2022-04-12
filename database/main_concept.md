@@ -1,8 +1,9 @@
 # Database  Fundamental
+
 ||Database ||
 |:---:|:---:|:---:|
-|Concept| Main components |DataBase users |
-||||
+|Concept|Main components|DataBase users|
+
 
 ## Concept
 
@@ -45,7 +46,9 @@ Database concept
 ----
 
 ## Database users
+
 Database cycle 
+
 | step1 | step2 | step3 | step4 |
 |:---:|:---:|:---:|:---:|
 |Analyze the data | Design database  | Implementation | Application Development |
