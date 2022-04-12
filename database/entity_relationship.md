@@ -49,7 +49,7 @@ Weak entity => double line
 connections between entities
 ### 1- degree of relationship
 `Diamond shape ` 
-- `has` ,`work`,`owns`
+- binary `has` ,`work`,`owns`
 - recursive relationship  `sup`
 - ternary relationship `Skilled use` between three entities
 

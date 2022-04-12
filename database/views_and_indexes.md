@@ -7,7 +7,7 @@ it is a database object
 - The view is stored as a SELECT statement in the data dictionary.
 
 
-## Creating a view
+### Creating a view
 ```sql
 CREATE VIEW view_name 
 AS 
@@ -34,7 +34,7 @@ WITH CHECK OPTION;
 
 ```
 
-## modifying a view
+### modifying a view
 
 ```sql
 CREATE OR REPLACE VIEW view_name
@@ -46,24 +46,25 @@ FROM Employee, Project, Works_on
 WHERE SSN=ESSN AND PNO-PNUMBER AND Dno=5:
 ```
 
-## Advantage of views
+### Advantage of views
 1. Restrict data access
 2. Make complex queries easier
 3. Provide data independence 
 4. Present different views of the same data 
 
 
-## Types of Views
+### Types of Views
+
 |Feature |Simple Views| Complex Views|
 |---|---|---|
 |Number of tables| One| One or more|
 |Contain functions| No |Yes|
 |Contain groups of data| No |Yes|
-|DML operations through a view|Yes| Not always
+|DML operations through a view|Yes| Not always|
 
 ----
 
-# Indexes
+## Indexes
 Use indexes to solve the following problem
 1. Not sorted
 2. Scattered
@@ -83,12 +84,12 @@ Create an index when:
 - Columns are used in search conditions and joins.
 - Column contain large number of nulls.
 
-## Creating an Index
+### Creating an Index
 ```sql
 CREATE INDEX index_name ON table_name (column_name)
 Create index emp_inx on employee(salary)
 ```
-## Remove an Index
+### Remove an Index
 ```sql
 DROP INDEX index_name
 ```

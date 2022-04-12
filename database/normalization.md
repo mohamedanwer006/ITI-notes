@@ -34,9 +34,9 @@ Conditions using keys and FDs of a relation to certify whether the relation sche
 
 ## First Normal Form
 - Multi valued Attribute
-> place it in a new tys PK as a FK
+> place it in a new table carrying PK as a FK
 - Repeating group
-> place it in a new tys PK as a FK
+> place it in a new table PK as a FK
 - Composite attribute
 > subparts each in a columns when necessary
 
