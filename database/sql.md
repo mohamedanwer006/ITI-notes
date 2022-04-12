@@ -141,10 +141,10 @@ REVOKE ALL ON Student FROM ahmed
 
 
 ## DML Data manipulation language 
-|**Commands**||||
-|---|---|---|---|
+||**Commands**|||
+|:---:|---|---|---|
 |INSERT|UPDATE|DELETE|SELECT|
-||||
+
 
 ### insert  data into a table
 
@@ -256,7 +256,9 @@ select * from employee where fname like 'ahm?d'
 ```
 ## Alias 
 used to rename a column
+
 > does not change anything on database
+
 ```sql
 select fname as name from employee
 
