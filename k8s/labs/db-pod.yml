@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: db-pod
+  labels:
+spec: 
+    containers:
+        - name: mysql-container
+          image: mysql:5.7
+          envFrom:
+            - secretRef:
+                name: db-secret

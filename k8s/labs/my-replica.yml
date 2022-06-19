@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: replica-set-1
+  labels:
+      app: replica-myApp
+spec:
+    template:
+        metadata:
+            labels:
+                app: my-busybox 
+        spec:
+            containers:
+                - name: my-busybox
+                  image: busybox
+                  command: ['sh', '-c', 'echo The app is running! && sleep 55600']
+    replicas: 5 
+    selector:
+        matchLabels:
+            app: my-busybox 
