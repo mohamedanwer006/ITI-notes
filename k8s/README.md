@@ -16,6 +16,8 @@
 
 [auth](./auth.md)
 
+[roles](./roles.md)
+
 
 
 # labs files
@@ -25,4 +27,8 @@
 [lab2](./labs/lab2.md)
 
 [lab3](./labs/lab3.md)
+
+[lab4](./labs/lab4.md)
+
+[lab5](./labs/lab5.md)
 
