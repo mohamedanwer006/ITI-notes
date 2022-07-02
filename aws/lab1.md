@@ -19,6 +19,19 @@ hostname -I  >> /var/www/html/index.html
 sudo yum update -y
 sudo yum install httpd -y
 sudo systemctl enable --now httpd
+
+conf="
+<VirtualHost *:*>
+        ProxyPreserveHost on
+        ServerAdmin ec2-user@localhost
+        ProxyPass / http://internal-privet-iti-lb-1957479526.us-east-1.elb.amazonaws.com/
+        ProxyPassReverse / http://internal-privet-iti-lb-1957479526.us-east-1.elb.amazonaws.com/
+</VirtualHost>
+"
+echo "$conf" >> /etc/httpd/conf/httpd.conf
+
+sudo systemctl restart httpd
+
 ```
 
 ## configure httpd as proxy
@@ -42,7 +55,7 @@ vim /etc/httpd/conf/httpd.conf
 > After edit the file, restart the httpd service
 
 ```bash
-systemctl restart httpd
+sudo systemctl restart httpd
 ```
 ## Test app
 http://public-iti-lb-1805198897.us-east-1.elb.amazonaws.com/
