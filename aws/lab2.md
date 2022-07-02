@@ -40,7 +40,7 @@ def lambda_handler(event, context):
     key_data={"S":str(ts)}
     response = dynamo_client.put_item(
     TableName='s3_table',
-    Item={"name":data,"s3table":key_data} )
+    Item={"name":data,"id":key_data} )
    
     return {
         'statusCode': 200,
