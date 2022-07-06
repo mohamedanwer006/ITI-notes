@@ -1,0 +1,5 @@
+#!/bin/bash
+cat << EOF
+{"service": "smb",
+ "package":"samba"}
+EOF
