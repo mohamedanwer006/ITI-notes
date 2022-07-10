@@ -1,0 +1,9 @@
+
+- hosts: lab4
+  roles:
+  - role: roles/httpd_vhost
+  post_tasks:
+    - name: custom index.html
+      ansible.builtin.copy:
+          dest: "/var/www/custom.com/index.html"
+          src: "../files/index.html"

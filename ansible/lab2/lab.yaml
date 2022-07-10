@@ -1,0 +1,38 @@
+- name: install-mariadb-paly-book
+  hosts: lab3
+  vars:
+     mysql_root_password: passwd
+  tasks:
+    - name: install mariadb
+      yum:
+        name: mariadb-server
+        state: present
+    - name: Install the Python MySQL Support Libraries
+      yum: pkg=MySQL-python state=latest
+        # start mariadb service
+    - name: start mariadb
+      service:
+        name: mariadb
+        state: started
+        enabled: true
+      notify:
+          - update-mysql-root-password
+          - create-db
+
+  handlers:
+    - name: update-mysql-root-password
+      mysql_user:
+        name: root
+        host: localhost
+        password: "{{ mysql_root_password }}"
+        login_user: root
+        login_password: "{{ mysql_root_password }}"
+        check_implicit_admin: yes
+        priv: "*.*:ALL,GRANT"
+
+    - name: create-db
+      mysql_db: 
+        name: MyNewDB 
+        state: present 
+        login_user: root 
+        login_password: "{{ mysql_root_password }}"

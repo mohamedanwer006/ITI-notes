@@ -1,0 +1,22 @@
+---
+# tasks file for httpd_vhost
+  - name: "Create document root"
+    file:
+      path: "/var/www/custom.com"
+      state: directory
+
+  - name: "Add firewall rule" 
+    firewalld:
+        port: "8080/tcp"
+        permanent: yes
+        state: enabled
+        immediate: yes
+    notify: "Restart firewalld"
+    ignore_errors: True
+
+  - name : copy config file
+    template:
+      src: "httpd.conf.j2"
+      dest: "/etc/httpd/conf.d/custom.com.conf"
+    notify:
+      - restart-httpd
