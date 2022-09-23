@@ -1,0 +1,20 @@
+jenkins:
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "admin"
+        - id: "dev"
+          password: "dev"
+
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              scope: GLOBAL
+              id: "dockerhub"
+              username: "mohameddev006"
+              password: "1234456789"
+              description: "Username/Password Credentials for DockerHub"

@@ -12,3 +12,6 @@
 ---
 
 ### [gke](./gke.md)
+---
+
+### [storage](./storage.md)
