@@ -1,0 +1,7 @@
+terraform init \
+    -backend-config="bucket=[bucketName]"\
+    -backend-config="key=terraform/application/app.state"\
+    -backend-config="dynamodb_table=[dynamodbTableName]"\
+    -backend-config="region=us-east-1"\
+    -backend-config="access_key=[ACCESS_KEY]\
+    -backend-config="secret_key=[SECRET_KEY]"
