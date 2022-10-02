@@ -2,4 +2,4 @@
 
 ### [Intro](./intro.md)
 ----
-### [Advanced](./advanced_tf.md)
+### [Advanced](./advanced_tf.mdx)
